@@ -5,6 +5,10 @@ reated by .ignore support plugin (hsz.mobi)
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+cache/
+artifacts/
+
 ### Eclipse template
 
 .metadata
