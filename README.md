@@ -11,7 +11,7 @@ Earn up to 8.1% APY with our stable savings account which is designed to provide
 
 ## Deployed Contracts
 
-These contracts have been deployed to the Celo Alfajores Testnet
+These contracts have been deployed to the Shardeum Liberty 20 Testnet
 
 XUSD - [0x3004a8a8f7D4b09615ec8D392cC9b07c2e7B7944](https://explorer-liberty20.shardeum.org/account/0x3004a8a8f7D4b09615ec8D392cC9b07c2e7B7944)
 
