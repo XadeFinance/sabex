@@ -2,7 +2,7 @@
 pragma solidity ^0.8.10;
 // import "./@node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-import "./tokenCreate.sol";
+//import "./tokenCreate.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
@@ -63,7 +63,7 @@ contract liquidityPool is ReentrancyGuard {
     }
 
     function depositERC20Token(uint amount) external {
-        IERC20(0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1).transferFrom(
+        IERC20(0xA3C957f5119eF3304c69dBB61d878798B3F239D9).transferFrom(
             msg.sender,
             address(this),
             amount
@@ -74,7 +74,8 @@ contract liquidityPool is ReentrancyGuard {
     function withdrawERC20Token(uint256 amount) external nonReentrant {
         require(amount <= amountDepositedByUser(), "Insufficient Funds");
         // TODO: This is CUSD testnet. You will have to change this to the mainnet address, or even better, make a CUSD variable and initialize in the constructor
-        IERC20(0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1).transfer(
+        userDepositedCUSD[msg.sender] -= amount;
+        IERC20(0xA3C957f5119eF3304c69dBB61d878798B3F239D9).transfer(
             msg.sender,
             amount
         );
